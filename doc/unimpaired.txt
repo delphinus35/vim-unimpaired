@@ -40,11 +40,11 @@ is "args" and for the "q" commands is "quickfix".
 *[T*     |:tfirst|
 *]T*     |:tlast|
 
-                                                *[f*
+                                                [f
 [f                      Go to the file preceding the current one
                         alphabetically in the current file's directory.
 
-                                                *]f*
+                                                ]f
 ]f                      Go to the file succeeding the current one
                         alphabetically in the current file's directory.
 
@@ -58,16 +58,16 @@ is "args" and for the "q" commands is "quickfix".
 
 LINE OPERATIONS                                 *unimpaired-lines*
 
-                                                *[<Space>*
+                                                [<Space>
 [<Space>                Add [count] blank lines above the cursor.
 
-                                                *]<Space>*
+                                                ]<Space>
 ]<Space>                Add [count] blank lines below the cursor.
 
-                                                *[e* *v_[e*
+                                                [e v_[e
 [e                      Exchange the current line with [count] lines above it.
 
-                                                *]e* *v_]e*
+                                                ]e v_]e
 ]e                      Exchange the current line with [count] lines below it.
 
 OPTION TOGGLING                                 *unimpaired-toggling*
