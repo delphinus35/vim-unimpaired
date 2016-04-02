@@ -88,8 +88,6 @@ endfunction
 
 nnoremap <silent> <Plug>unimpairedDirectoryNext     :<C-U>edit <C-R>=fnamemodify(<SID>fnameescape(<SID>FileByOffset(v:count1)), ':.')<CR><CR>
 nnoremap <silent> <Plug>unimpairedDirectoryPrevious :<C-U>edit <C-R>=fnamemodify(<SID>fnameescape(<SID>FileByOffset(-v:count1)), ':.')<CR><CR>
-nmap ]f <Plug>unimpairedDirectoryNext
-nmap [f <Plug>unimpairedDirectoryPrevious
 
 nmap <silent> <Plug>unimpairedONext     <Plug>unimpairedDirectoryNext:echohl WarningMSG<Bar>echo "]o is deprecated. Use ]f"<Bar>echohl NONE<CR>
 nmap <silent> <Plug>unimpairedOPrevious <Plug>unimpairedDirectoryPrevious:echohl WarningMSG<Bar>echo "[o is deprecated. Use [f"<Bar>echohl NONE<CR>
@@ -161,9 +159,6 @@ endfunction
 nnoremap <silent> <Plug>unimpairedBlankUp   :<C-U>call <SID>BlankUp(v:count1)<CR>
 nnoremap <silent> <Plug>unimpairedBlankDown :<C-U>call <SID>BlankDown(v:count1)<CR>
 
-nmap [<Space> <Plug>unimpairedBlankUp
-nmap ]<Space> <Plug>unimpairedBlankDown
-
 function! s:Move(cmd, count, map) abort
   normal! m`
   silent! exe 'move'.a:cmd.a:count
@@ -189,11 +184,6 @@ nnoremap <silent> <Plug>unimpairedMoveUp            :<C-U>call <SID>Move('--',v:
 nnoremap <silent> <Plug>unimpairedMoveDown          :<C-U>call <SID>Move('+',v:count1,'Down')<CR>
 noremap  <silent> <Plug>unimpairedMoveSelectionUp   :<C-U>call <SID>MoveSelectionUp(v:count1)<CR>
 noremap  <silent> <Plug>unimpairedMoveSelectionDown :<C-U>call <SID>MoveSelectionDown(v:count1)<CR>
-
-nmap [e <Plug>unimpairedMoveUp
-nmap ]e <Plug>unimpairedMoveDown
-xmap [e <Plug>unimpairedMoveSelectionUp
-xmap ]e <Plug>unimpairedMoveSelectionDown
 
 " }}}1
 " Option toggling {{{1
